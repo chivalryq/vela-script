@@ -5,6 +5,6 @@ kind create cluster --image kindest/node:v1.18.15@sha256:5c1b980c4d0e0e8e7eb9f36
 #helm repo add kubevela https://kubevelacharts.oss-accelerate.aliyuncs.com/core
 #helm repo update
 echo "installing charts from local"
-helm install --create-namespace -n vela-system kubevela ~/repo/kubevela/charts/vela-core  --set admissionWebhooks.enabled=true --set replicaCount=1
+helm install --create-namespace -n vela-system kubevela ~/repo/kubevela/charts/vela-core  --set admissionWebhooks.enabled=true --set replicaCount=1  --wait
 
-setproxy
+#setproxy
